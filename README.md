@@ -1,60 +1,74 @@
 # BeduSec/beduhashes
 
 🔐 **MD5 and SHA256 Brute Force Decrypter**  
-A lightweight tool to reverse password hashes using brute force — built for educational and security research purposes.
+A multi-language tool to reverse password hashes using brute force — built for educational and security research purposes.
 
 ## 🚀 Features
 
 - 🔁 Brute force decryption for **MD5** and **SHA256** hashes
-- 🐍 Available in **Python**, **PHP**, and **HTML/JavaScript** versions
-- ⚡ Fast and customizable wordlist support
-- 🧪 Ideal for learning about hash cracking and password security
+- 🌐 **Web version** (HTML/JavaScript) for quick testing
+- 🐍 **Python scripts** for more control and speed
+- 🐘 **PHP version** for server-side implementation
+- 📚 Includes `rockyou.txt` wordlist (commonly used passwords)
 
 ## 📁 Repository Structure
 
 ```
 
 beduhashes/
-├──md5/
+├──web/
+│├── index.html      # Main web interface
+│└── index2.html      # Alternative version
+├──python/
 │├── md5_bruteforce.py
+│└── sha256_bruteforce.py
+├──php/
 │├── md5_bruteforce.php
-│└── index.html
-├──sha256/
-│├── sha256_bruteforce.py
 │└── sha256_bruteforce.php
 ├──wordlists/
-│└── common_passwords.txt
+│└── rockyou.txt      # Sample wordlist (common passwords)
+├──.gitignore
 └──README.md
 
 ```
 
-> ⚠️ Note: Some files are still being uploaded — stay tuned!
+> ⚠️ **Note:** Currently uploading Python, PHP, and organized web files. The structure above shows the planned organization.
 
 ## 🛠️ How It Works
 
 1. You provide a hash (MD5 or SHA256)
-2. The script generates possible passwords (brute force or using a wordlist)
+2. The script generates possible passwords (brute force or using wordlist)
 3. It compares the hash of each candidate with the target hash
 4. If a match is found, the original password is revealed
 
 ## ▶️ Usage Examples
 
-### Python (MD5)
+### 🌐 Web Version
+Simply open `web/index.html` in any browser for client-side brute force demo.
+
+### 🐍 Python
 
 ```bash
-cd md5
+# Navigate to python folder first
+cd python
 python md5_bruteforce.py
 ```
 
-PHP (SHA256)
+🐘 PHP
 
 ```bash
-php sha256/sha256_bruteforce.php
+php php/sha256_bruteforce.php
 ```
 
-Web Version
+📚 Using rockyou.txt wordlist
 
-Open index.html in your browser for a simple client-side brute force demo.
+The included rockyou.txt (truncated version) can be used with any script for dictionary attacks.
+
+⚠️ Important Notes
+
+· rockyou.txt is a sample wordlist (full version is too large for GitHub)
+· Web versions run client-side (slower but no server needed)
+· Python/PHP versions are faster and support larger wordlists
 
 📚 Educational Purpose Only
 
@@ -66,9 +80,20 @@ This tool is intended for:
 
 ❗ Do not use this tool for illegal or malicious purposes.
 
+🛠️ Installation
+
+```bash
+git clone https://github.com/BeduSec/beduhashes.git
+cd beduhashes
+```
+
 🤝 Contributing
 
-Feel free to open issues or submit pull requests to improve the code or add new hash types.
+Feel free to open issues or submit pull requests:
+
+· Add new hash types
+· Improve brute force algorithms
+· Optimize wordlist handling
 
 👤 Author
 
@@ -84,7 +109,6 @@ MIT License — see the LICENSE file for details.
 ---
 
 ⭐ Star this repo if you find it useful!
+💬 Questions? Open an issue or start a discussion.
 
 ```
-
----
